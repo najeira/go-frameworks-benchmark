@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"net/http"
 	"runtime"
@@ -43,7 +44,22 @@ func (m *mockResponseWriter) WriteHeader(code int) {
 
 }
 
+type simpleResponseWriter struct {
+	code   int
+	body   bytes.Buffer
+	header http.Header
+}
 
+func (m *simpleResponseWriter) Header() http.Header {
+	return m.header
+}
+
+func (m *simpleResponseWriter) Write(p []byte) (int, error) {
+	return m.body.Write(p)
+}
+
+func (m *simpleResponseWriter) WriteHeader(code int) {
+	m.code = code
 }
 
 func calcMem(name string, load func()) {
@@ -76,6 +92,12 @@ func benchRequest(b *testing.B, router http.Handler, r *http.Request) {
 		u.RawQuery = rq
 		router.ServeHTTP(&w, r)
 	}
+}
+
+func sendRequest(router http.Handler, r *http.Request) (int, []byte, http.Header) {
+	w := simpleResponseWriter{header: http.Header{}}
+	router.ServeHTTP(&w, r)
+	return w.code, w.body.Bytes(), w.header
 }
 
 func main() {

@@ -17,5 +17,9 @@ func initGoji() {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		fmt.Fprintf(w, "Hello, World")
 	})
+	h.Get("/:name", func(c goji.C, w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+		fmt.Fprintf(w, "Hello, %s", c.URLParams["name"])
+	})
 	registerHandler("goji", h)
 }
