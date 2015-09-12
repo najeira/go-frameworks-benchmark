@@ -16,7 +16,7 @@ func initKami() {
 	h := kami.New()
 	h.Get("/", func(c context.Context, w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		fmt.Fprintf(w, responseText)
+		fmt.Fprintf(w, "Hello, World")
 	})
 	registerHandler("kami", h)
 }

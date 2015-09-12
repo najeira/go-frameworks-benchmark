@@ -15,7 +15,7 @@ func initGoji() {
 	h := goji.New()
 	h.Get("/", func(c goji.C, w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		fmt.Fprintf(w, responseText)
+		fmt.Fprintf(w, "Hello, World")
 	})
 	registerHandler("goji", h)
 }

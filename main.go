@@ -7,10 +7,6 @@ import (
 	"testing"
 )
 
-const (
-	responseText = "Hello, 世界"
-)
-
 var (
 	httpHandlers map[string]http.Handler
 )
@@ -43,11 +39,10 @@ func (m *mockResponseWriter) Write(p []byte) (int, error) {
 	return len(p), nil
 }
 
-func (m *mockResponseWriter) WriteString(s string) (int, error) {
-	return len(s), nil
+func (m *mockResponseWriter) WriteHeader(code int) {
+
 }
 
-func (m *mockResponseWriter) WriteHeader(code int) {
 
 }
 

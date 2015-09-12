@@ -15,7 +15,7 @@ func initMartini() {
 	m.Action(r.Handle)
 	h := &martini.ClassicMartini{m, r}
 	h.Get("/", func() string {
-		return responseText
+		return "Hello, World"
 	})
 	registerHandler("martini", h)
 }

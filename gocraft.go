@@ -14,7 +14,7 @@ func initGocraft() {
 	var ctx struct{}
 	h := gocraft.New(ctx)
 	h.Get("/", func(w gocraft.ResponseWriter, r *gocraft.Request) {
-		fmt.Fprintf(w, responseText)
+		fmt.Fprintf(w, "Hello, World")
 	})
 	registerHandler("gocraft", h)
 }
