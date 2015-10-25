@@ -14,5 +14,9 @@ func initGin() {
 	h.GET("/", func(c *gin.Context) {
 		c.String(200, "Hello, World")
 	})
+	h.GET("/:name", func(c *gin.Context) {
+		name := c.Param("name")
+		c.String(200, "Hello, %s", name)
+	})
 	registerHandler("gin", h)
 }
