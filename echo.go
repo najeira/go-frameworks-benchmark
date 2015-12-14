@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/labstack/echo"
 )
 
@@ -14,7 +16,7 @@ func initEcho() {
 		return c.String(200, "Hello, World")
 	})
 	h.Get("/:name", func(c *echo.Context) error {
-		return c.String(200, "Hello, %s", c.Param("name"))
+		return c.String(200, fmt.Sprintf("Hello, %s", c.Param("name")))
 	})
 	registerHandler("echo", h)
 }
