@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/pressly/chi"
-	"golang.org/x/net/context"
 )
 
 func init() {
@@ -14,13 +13,13 @@ func init() {
 
 func initChi() {
 	h := chi.NewRouter()
-	h.Get("/", func(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	h.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		fmt.Fprintf(w, "Hello, World")
 	})
-	h.Get("/:name", func(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+	h.Get("/:name", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		fmt.Fprintf(w, "Hello, %s", chi.URLParams(ctx)["name"])
+		fmt.Fprintf(w, "Hello, %s", chi.URLParam(r, "name"))
 	})
 	registerHandler("chi", h)
 }
