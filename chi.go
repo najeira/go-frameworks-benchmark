@@ -17,7 +17,7 @@ func initChi() {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		fmt.Fprintf(w, "Hello, World")
 	})
-	h.Get("/:name", func(w http.ResponseWriter, r *http.Request) {
+	h.Get("/{name}", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		fmt.Fprintf(w, "Hello, %s", chi.URLParam(r, "name"))
 	})
