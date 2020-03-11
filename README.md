@@ -73,11 +73,12 @@ Routers faster than net/http order by fast:
 - julienschmidt/httprouter
 - clevergo
 - gin
-- ozzo-routing
+- ozzo-routing: regular expression matching
 - echo
 - goji
-- chi
+- chi: regular expression matching
 - lion
+
 
 ## Links
 
