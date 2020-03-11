@@ -68,34 +68,26 @@ go test -bench=. -benchmem
 
 ## Conclusion
 
-Routers faster than net/http order by fast:
+Routers order by fast:
 
-- julienschmidt/httprouter
-- clevergo
-- gin
-- ozzo-routing: regular expression matching
-- echo
-- goji
-- chi: regular expression matching
-- lion
-
-
-## Links
-
-- [bone](https://github.com/go-zoo/bone)
-- [chi](https://github.com/pressly/chi)
-- [clevergo](https://github.com/clevergo/clevergo)
-- [echo](https://github.com/labstack/echo)
-- [fireball](https://github.com/zpatrick/fireball)
-- [gin](https://github.com/gin-gonic/gin)
-- [gocraft](https://github.com/gocraft/web)
-- [goji](https://github.com/zenazn/goji)
-- [gorilla](https://github.com/gorilla/mux)
-- [gorouter](https://github.com/xujiajun/gorouter)
-- [httptreemux](https://github.com/dimfeld/httptreemux)
 - [httprouter](https://github.com/julienschmidt/httprouter)
-- [kami](https://github.com/guregu/kami)
+- [clevergo](https://github.com/clevergo/clevergo)
+- [ozzo-routing](https://github.com/go-ozzo/ozzo-routing): regular expression matching
+- [echo](https://github.com/labstack/echo)
+- [gin](https://github.com/gin-gonic/gin)
+- [goji](https://github.com/zenazn/goji)
+- net/http
+- 2x slower httprouter
 - [lion](https://github.com/celrenheit/lion)
-- [martini](https://github.com/go-martini/martini) no longer maintained
-- [ozzo-routing](https://github.com/go-ozzo/ozzo-routing)
+- [gocraft](https://github.com/gocraft/web)
+- [chi](https://github.com/pressly/chi): regular expression matching
+- [kami](https://github.com/guregu/kami)
+- 3x slower httprouter
+- [httptreemux](https://github.com/dimfeld/httptreemux)
 - [siesta](https://github.com/VividCortex/siesta)
+- 4x slower httprouter
+- [gorilla](https://github.com/gorilla/mux)
+- [fireball](https://github.com/zpatrick/fireball)
+- [bone](https://github.com/go-zoo/bone)
+- [martini](https://github.com/go-martini/martini): no longer maintained
+- [gorouter](https://github.com/xujiajun/gorouter)
