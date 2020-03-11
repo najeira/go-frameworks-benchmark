@@ -65,3 +65,36 @@ MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)
 ```
 go test -bench=. -benchmem
 ```
+
+## Conclusion
+
+Routers faster than net/http order by fast:
+
+- julienschmidt/httprouter
+- clevergo
+- gin
+- ozzo-routing
+- echo
+- goji
+- chi
+- lion
+
+## Links
+
+- [bone](https://github.com/go-zoo/bone)
+- [chi](https://github.com/pressly/chi)
+- [clevergo](https://github.com/clevergo/clevergo)
+- [echo](https://github.com/labstack/echo)
+- [fireball](https://github.com/zpatrick/fireball)
+- [gin](https://github.com/gin-gonic/gin)
+- [gocraft](https://github.com/gocraft/web)
+- [goji](https://github.com/zenazn/goji)
+- [gorilla](https://github.com/gorilla/mux)
+- [gorouter](https://github.com/xujiajun/gorouter)
+- [httptreemux](https://github.com/dimfeld/httptreemux)
+- [httprouter](https://github.com/julienschmidt/httprouter)
+- [kami](https://github.com/guregu/kami)
+- [lion](https://github.com/celrenheit/lion)
+- [martini](https://github.com/go-martini/martini) no longer maintained
+- [ozzo-routing](https://github.com/go-ozzo/ozzo-routing)
+- [siesta](https://github.com/VividCortex/siesta)
