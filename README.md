@@ -68,8 +68,6 @@ go test -bench=. -benchmem
 
 ## Conclusion
 
-Routers order by fast:
-
 Faster than net/http:
 - [httprouter](https://github.com/julienschmidt/httprouter)
 - [clevergo](https://github.com/clevergo/clevergo)
@@ -78,7 +76,7 @@ Faster than net/http:
 - [gin](https://github.com/gin-gonic/gin)
 - [goji](https://github.com/zenazn/goji)
 
-Fast​close to net/http:
+Fast equivalent to net/http:
 - [lion](https://github.com/celrenheit/lion)
 - [gocraft](https://github.com/gocraft/web)
 - [chi](https://github.com/pressly/chi): regular expression matching
