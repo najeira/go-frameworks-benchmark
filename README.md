@@ -70,22 +70,23 @@ go test -bench=. -benchmem
 
 Routers order by fast:
 
+Faster than net/http:
 - [httprouter](https://github.com/julienschmidt/httprouter)
 - [clevergo](https://github.com/clevergo/clevergo)
 - [ozzo-routing](https://github.com/go-ozzo/ozzo-routing): regular expression matching
 - [echo](https://github.com/labstack/echo)
 - [gin](https://github.com/gin-gonic/gin)
 - [goji](https://github.com/zenazn/goji)
-- net/http
-- 2x slower httprouter
+
+Fast​close to net/http:
 - [lion](https://github.com/celrenheit/lion)
 - [gocraft](https://github.com/gocraft/web)
 - [chi](https://github.com/pressly/chi): regular expression matching
 - [kami](https://github.com/guregu/kami)
-- 3x slower httprouter
 - [httptreemux](https://github.com/dimfeld/httptreemux)
 - [siesta](https://github.com/VividCortex/siesta)
-- 4x slower httprouter
+
+2x slower net/http:
 - [gorilla](https://github.com/gorilla/mux)
 - [fireball](https://github.com/zpatrick/fireball)
 - [bone](https://github.com/go-zoo/bone)
