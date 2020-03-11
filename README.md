@@ -89,4 +89,4 @@ Fast equivalent to net/http:
 - [fireball](https://github.com/zpatrick/fireball)
 - [bone](https://github.com/go-zoo/bone)
 - [martini](https://github.com/go-martini/martini): no longer maintained
-- [gorouter](https://github.com/xujiajun/gorouter)
+- [gorouter](https://github.com/xujiajun/gorouter): regular expression matching
