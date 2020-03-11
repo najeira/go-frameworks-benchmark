@@ -84,9 +84,9 @@ Fast​close to net/http:
 - [chi](https://github.com/pressly/chi): regular expression matching
 - [kami](https://github.com/guregu/kami)
 - [httptreemux](https://github.com/dimfeld/httptreemux)
-- [siesta](https://github.com/VividCortex/siesta)
 
 2x slower net/http:
+- [siesta](https://github.com/VividCortex/siesta)
 - [gorilla](https://github.com/gorilla/mux)
 - [fireball](https://github.com/zpatrick/fireball)
 - [bone](https://github.com/go-zoo/bone)
