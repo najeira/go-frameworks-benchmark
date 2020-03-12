@@ -76,7 +76,7 @@ Faster than net/http:
 - [gin](https://github.com/gin-gonic/gin)
 - [goji](https://github.com/zenazn/goji)
 
-Fast equivalent to net/http:
+Fast same as net/http:
 - [lion](https://github.com/celrenheit/lion)
 - [gocraft](https://github.com/gocraft/web)
 - [chi](https://github.com/pressly/chi): regular expression matching
