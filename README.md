@@ -4,7 +4,7 @@ A micro benchmark for golang http routers and web frameworks.
 
 ## Results
 
-Date: 2020-03-11
+Date: 2021-06-18
 
 ### Bench
 
